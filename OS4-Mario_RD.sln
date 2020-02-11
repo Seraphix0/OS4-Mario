@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OS4-Mario", "OS4-Mario\OS4-Mario.sqlproj", "{A9644642-DDBD-412A-8FB0-2386ACD03362}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9644642-DDBD-412A-8FB0-2386ACD03362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9644642-DDBD-412A-8FB0-2386ACD03362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9644642-DDBD-412A-8FB0-2386ACD03362}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A9644642-DDBD-412A-8FB0-2386ACD03362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9644642-DDBD-412A-8FB0-2386ACD03362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9644642-DDBD-412A-8FB0-2386ACD03362}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AEAEE66-CD2B-431B-988B-619E423F6EE3}
+	EndGlobalSection
+EndGlobal
