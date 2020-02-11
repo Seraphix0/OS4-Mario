@@ -58,6 +58,22 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Table1.sql" />
+    <Build Include="Order.sql" />
+    <Build Include="Coupon.sql" />
+    <Build Include="Customer.sql" />
+    <Build Include="Availability.sql" />
+    <Build Include="Deliverer.sql" />
+    <Build Include="DelivererAvailability.sql" />
+    <Build Include="Restaurant.sql" />
+    <Build Include="Pizza.sql" />
+    <Build Include="Dough.sql" />
+    <Build Include="Sauce.sql" />
+    <Build Include="Ingredients.sql" />
+    <Build Include="Side.sql" />
+    <Build Include="OrderPizza.sql" />
+    <Build Include="OrderSide.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="OS4-Mario.refactorlog" />
   </ItemGroup>
 </Project>
