@@ -1,0 +1,10 @@
+Feedback week 2:
+- Coupon uitbreiden (verschillende types korting)
+- Invoice -> waar is klant? waar is adres?
+- Order.DateTime veranderen naar iets anders (OrderDate)
+- Belasting moet ergens staan
+- Sauce weghalen
+- Custom pizza veranderen, waar sla je dit op? 
+- Sub catergory, wat als je een 3e category hebt? 
+- Key, pair values in properties tabel
+- Klanten kan meerdere adressen hebben
