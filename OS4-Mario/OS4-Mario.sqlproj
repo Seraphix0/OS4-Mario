@@ -68,10 +68,13 @@
     <Build Include="Pizza.sql" />
     <Build Include="Dough.sql" />
     <Build Include="Sauce.sql" />
-    <Build Include="Ingredients.sql" />
-    <Build Include="Side.sql" />
-    <Build Include="OrderPizza.sql" />
-    <Build Include="OrderSide.sql" />
+    <Build Include="Category.sql" />
+    <Build Include="Ingredient.sql" />
+    <Build Include="Invoice.sql" />
+    <Build Include="OrderProduct.sql" />
+    <Build Include="PizzaIngredient.sql" />
+    <Build Include="Product.sql" />
+    <Build Include="SubCategory.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="OS4-Mario.refactorlog" />

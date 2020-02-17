@@ -5,4 +5,5 @@
     [LastName] VARCHAR(50) NOT NULL, 
     [RestaurantId] INT NULL, 
     [DelivererAvailabilityId] INT NULL, 
+    CONSTRAINT [FK_Deliverer_ToRestaurant] FOREIGN KEY ([RestaurantId]) REFERENCES [Restaurant]([Id]), 
 )

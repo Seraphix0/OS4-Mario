@@ -1,5 +1,6 @@
 ﻿CREATE TABLE [dbo].[Availability]
 (
 	[Id] INT NOT NULL PRIMARY KEY, 
-    [Date] DATETIME NOT NULL
+    [IntervalStart] DATETIME NOT NULL, 
+    [IntervalEnd] DATETIME NULL
 )
