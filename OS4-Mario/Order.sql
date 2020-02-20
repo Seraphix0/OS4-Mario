@@ -13,7 +13,5 @@
     [CustomerIdLink] INT NOT NULL, 
     CONSTRAINT [FK_Order_ToCoupon] FOREIGN KEY ([CouponId]) REFERENCES [Coupon]([Id]), 
     CONSTRAINT [FK_Order_ToDeliverer] FOREIGN KEY ([DelivererId]) REFERENCES [Deliverer]([Id]), 
-    CONSTRAINT [FK_Order_CustomerAddressLink] FOREIGN KEY ([AddressIdLink]) REFERENCES [CustomerAddressLink]([AddressIdLink]), 
-    CONSTRAINT [FK_Order_CustomerIdLink] FOREIGN KEY ([CustomerIdLink]) REFERENCES [CustomerAddressLink]([CustomerIdLink]) 
-
+    CONSTRAINT [FK_Order_ToCustomerAddressLink] FOREIGN KEY ([AddressIdLink], [CustomerIdLink]) REFERENCES [CustomerAddressLink]([CustomerIdLink], [AddressIdLink]) 
 )
