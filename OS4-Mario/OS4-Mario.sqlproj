@@ -74,6 +74,7 @@
     <Build Include="ProductProperty.sql" />
     <Build Include="OrderItem.sql" />
     <Build Include="OrderItemProperty.sql" />
+    <Build Include="CustomerAddressLink.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="OS4-Mario.refactorlog" />
