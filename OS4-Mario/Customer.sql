@@ -4,5 +4,5 @@
     [Name] VARCHAR(50) NULL, 
     [Phone] VARCHAR(50) NULL, 
     [Email] VARCHAR(50) NULL, 
-    [Address] VARCHAR(50) NULL
+    [IsActive] BIT NULL, 
 )

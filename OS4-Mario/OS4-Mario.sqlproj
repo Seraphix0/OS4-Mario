@@ -65,16 +65,15 @@
     <Build Include="Deliverer.sql" />
     <Build Include="DelivererAvailability.sql" />
     <Build Include="Restaurant.sql" />
-    <Build Include="Pizza.sql" />
     <Build Include="Dough.sql" />
-    <Build Include="Sauce.sql" />
     <Build Include="Category.sql" />
     <Build Include="Ingredient.sql" />
     <Build Include="Invoice.sql" />
-    <Build Include="OrderProduct.sql" />
-    <Build Include="PizzaIngredient.sql" />
     <Build Include="Product.sql" />
-    <Build Include="SubCategory.sql" />
+    <Build Include="Address.sql" />
+    <Build Include="ProductProperty.sql" />
+    <Build Include="OrderItem.sql" />
+    <Build Include="OrderItemProperty.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="OS4-Mario.refactorlog" />

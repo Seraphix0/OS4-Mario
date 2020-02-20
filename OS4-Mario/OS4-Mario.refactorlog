@@ -168,4 +168,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="OrderItemId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="65a3c0ee-1438-43e5-8641-f3170d5db476" ChangeDateTime="02/20/2020 19:10:19">
+    <Property Name="ElementName" Value="[dbo].[CustomerAddressLink].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CustomerAddressLink]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CustomerIdLink" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7cba2e9a-9c08-46a8-aea6-e1e0baba14c6" ChangeDateTime="02/20/2020 19:11:47">
+    <Property Name="ElementName" Value="[dbo].[Order].[AddressId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AddressIdLink" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ac5b0ece-ba03-42e5-8183-ad0f12da4605" ChangeDateTime="02/20/2020 19:12:09">
+    <Property Name="ElementName" Value="[dbo].[FK_Order_Address]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Order_CustomerAddressLink]" />
+  </Operation>
 </Operations>
