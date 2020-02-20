@@ -189,4 +189,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[FK_Order_CustomerAddressLink]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="5cac9c0b-939b-4e60-bd9c-0dcf5139492c" ChangeDateTime="02/20/2020 19:31:56">
+    <Property Name="ElementName" Value="[dbo].[CustomerAddressLink].[AddresIdLink]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CustomerAddressLink]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AddressIdLink" />
+  </Operation>
 </Operations>
