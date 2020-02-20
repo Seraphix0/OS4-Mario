@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[CustomerAddressLink]
 (
 	[CustomerIdLink] INT NOT NULL , 
-    [AddresIdLink] INT NOT NULL, 
-    PRIMARY KEY ([AddresIdLink], [CustomerIdLink])
+    [AddressIdLink] INT NOT NULL, 
+    PRIMARY KEY ([AddressIdLink], [CustomerIdLink])
 )
