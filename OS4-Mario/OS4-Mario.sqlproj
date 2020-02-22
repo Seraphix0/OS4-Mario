@@ -56,6 +56,7 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="ImportScripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Order.sql" />
@@ -75,6 +76,8 @@
     <Build Include="OrderItem.sql" />
     <Build Include="OrderItemProperty.sql" />
     <Build Include="CustomerAddressLink.sql" />
+    <None Include="ImportScripts\Import-Pizza_ingredienten.sql" />
+    <None Include="ImportScripts\Conform-Pizza_Ingredienten.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="OS4-Mario.refactorlog" />

@@ -196,4 +196,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="AddressIdLink" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="abbe3993-4fea-404f-96cc-e60e444a9157" ChangeDateTime="02/22/2020 19:40:12">
+    <Property Name="ElementName" Value="[dbo].[Category].[SubCategoryId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Category]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ParentCategoryId" />
+  </Operation>
 </Operations>
