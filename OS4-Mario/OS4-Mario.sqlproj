@@ -66,10 +66,7 @@
     <Build Include="Deliverer.sql" />
     <Build Include="DelivererAvailability.sql" />
     <Build Include="Restaurant.sql" />
-    <Build Include="Dough.sql" />
     <Build Include="Category.sql" />
-    <Build Include="Ingredient.sql" />
-    <Build Include="Invoice.sql" />
     <Build Include="Product.sql" />
     <Build Include="Address.sql" />
     <Build Include="ProductProperty.sql" />
