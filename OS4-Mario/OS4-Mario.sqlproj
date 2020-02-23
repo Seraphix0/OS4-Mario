@@ -76,10 +76,19 @@
     <Build Include="OrderItem.sql" />
     <Build Include="OrderItemProperty.sql" />
     <Build Include="CustomerAddressLink.sql" />
-    <None Include="ImportScripts\Import-Pizza_ingredienten.sql" />
     <None Include="ImportScripts\Conform-Pizza_Ingredienten.sql" />
+    <Build Include="ImportScripts\dbo.pizzabodems.sql" />
+    <Build Include="ImportScripts\dbo.MarioOrderData.sql" />
+    <Build Include="ImportScripts\dbo.overige_producten.sql" />
+    <Build Include="ImportScripts\dbo.pizza_ingredienten.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="OS4-Mario.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImportScripts\SSIS_Overige-producten.dtsx" />
+    <None Include="ImportScripts\SSIS_Pizzabodems.dtsx" />
+    <None Include="ImportScripts\SSIS_PizzaIngredienten.dtsx" />
+    <None Include="ImportScripts\PostcodeTabel.dtsx" />
   </ItemGroup>
 </Project>

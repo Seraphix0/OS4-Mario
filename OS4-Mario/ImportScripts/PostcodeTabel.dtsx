@@ -1,0 +1,787 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/23/2020 3:34:51 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-FNSK1U9"
+  DTS:CreatorName="DESKTOP-FNSK1U9\Melvin"
+  DTS:Description="PostcodeTabelAccessImport"
+  DTS:DTSID="{203CB738-1A65-4ABC-B78F-C165FBF0F6B7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1900.63"
+  DTS:LocaleID="1043"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PostcodeTabel"
+  DTS:ProtectionLevel="0"
+  DTS:VersionGUID="{71197457-A324-4F12-A6A9-CB4B234CD31E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{38297056-E877-444A-A3B8-DB6AD39414F7}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=os4.database.windows.net;User ID=learningMachine;Initial Catalog=Mario;Provider=SQLNCLI11;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D4175B3D-89E8-4DE4-9389-49E5EF9D07D1}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=G:\MarioData\Postcode tabel.mdb;OLE DB SERVICES=0;Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{CA79EFC2-174C-4628-AECE-5736187CD59A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - GEMEENTEN"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - GEMEENTEN"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[GEMEENTEN]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input].Columns[N42_GEM_KODE]"
+                      cachedDataType="numeric"
+                      cachedName="N42_GEM_KODE"
+                      cachedPrecision="4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input].ExternalColumns[N42_GEM_KODE]"
+                      lineageId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].Columns[N42_GEM_KODE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input].Columns[N42_GEM_NAAM]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="N42_GEM_NAAM"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input].ExternalColumns[N42_GEM_NAAM]"
+                      lineageId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].Columns[N42_GEM_NAAM]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input].ExternalColumns[N42_GEM_KODE]"
+                      dataType="numeric"
+                      name="N42_GEM_KODE"
+                      precision="4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input].ExternalColumns[N42_GEM_NAAM]"
+                      dataType="wstr"
+                      length="24"
+                      name="N42_GEM_NAAM" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - GEMEENTEN.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - GEMEENTEN.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - GEMEENTEN.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Destination 1 - POSTCODES"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination 1 - POSTCODES"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[POSTCODES]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].Columns[A13_POSTCODE]"
+                      cachedDataType="wstr"
+                      cachedLength="7"
+                      cachedName="A13_POSTCODE"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_POSTCODE]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_POSTCODE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].Columns[A13_REEKSIND]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="A13_REEKSIND"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_REEKSIND]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_REEKSIND]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].Columns[A13_BREEKPUNT_VAN]"
+                      cachedDataType="numeric"
+                      cachedName="A13_BREEKPUNT_VAN"
+                      cachedPrecision="5"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_BREEKPUNT_VAN]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_BREEKPUNT_VAN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].Columns[A13_BREEKPUNT_TEM]"
+                      cachedDataType="numeric"
+                      cachedName="A13_BREEKPUNT_TEM"
+                      cachedPrecision="5"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_BREEKPUNT_TEM]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_BREEKPUNT_TEM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].Columns[A13_WOONPLAATS]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="A13_WOONPLAATS"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_WOONPLAATS]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_WOONPLAATS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].Columns[A13_STRAATNAAM]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="A13_STRAATNAAM"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_STRAATNAAM]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_STRAATNAAM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].Columns[A13_GEMEENTECODE]"
+                      cachedDataType="numeric"
+                      cachedName="A13_GEMEENTECODE"
+                      cachedPrecision="4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_GEMEENTECODE]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_GEMEENTECODE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_POSTCODE]"
+                      dataType="wstr"
+                      length="7"
+                      name="A13_POSTCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_REEKSIND]"
+                      dataType="wstr"
+                      length="1"
+                      name="A13_REEKSIND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_BREEKPUNT_VAN]"
+                      dataType="numeric"
+                      name="A13_BREEKPUNT_VAN"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_BREEKPUNT_TEM]"
+                      dataType="numeric"
+                      name="A13_BREEKPUNT_TEM"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_WOONPLAATS]"
+                      dataType="wstr"
+                      length="24"
+                      name="A13_WOONPLAATS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_STRAATNAAM]"
+                      dataType="wstr"
+                      length="24"
+                      name="A13_STRAATNAAM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input].ExternalColumns[A13_GEMEENTECODE]"
+                      dataType="numeric"
+                      name="A13_GEMEENTECODE"
+                      precision="4" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - GEMEENTEN"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - GEMEENTEN"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">GEMEENTEN</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - GEMEENTEN.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].Columns[N42_GEM_KODE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].ExternalColumns[N42_GEM_KODE]"
+                      lineageId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].Columns[N42_GEM_KODE]"
+                      name="N42_GEM_KODE"
+                      precision="4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].Columns[N42_GEM_NAAM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].ExternalColumns[N42_GEM_NAAM]"
+                      length="24"
+                      lineageId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].Columns[N42_GEM_NAAM]"
+                      name="N42_GEM_NAAM"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].ExternalColumns[N42_GEM_KODE]"
+                      dataType="numeric"
+                      name="N42_GEM_KODE"
+                      precision="4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output].ExternalColumns[N42_GEM_NAAM]"
+                      dataType="wstr"
+                      length="24"
+                      name="N42_GEM_NAAM" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output].Columns[N42_GEM_KODE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output].Columns[N42_GEM_KODE]"
+                      name="N42_GEM_KODE"
+                      precision="4" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output].Columns[N42_GEM_NAAM]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output].Columns[N42_GEM_NAAM]"
+                      name="N42_GEM_NAAM" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source 1 - POSTCODES"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source 1 - POSTCODES"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">POSTCODES</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_POSTCODE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_POSTCODE]"
+                      length="7"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_POSTCODE]"
+                      name="A13_POSTCODE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_REEKSIND]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_REEKSIND]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_REEKSIND]"
+                      name="A13_REEKSIND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_BREEKPUNT_VAN]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_BREEKPUNT_VAN]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_BREEKPUNT_VAN]"
+                      name="A13_BREEKPUNT_VAN"
+                      precision="5"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_BREEKPUNT_TEM]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_BREEKPUNT_TEM]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_BREEKPUNT_TEM]"
+                      name="A13_BREEKPUNT_TEM"
+                      precision="5"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_WOONPLAATS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_WOONPLAATS]"
+                      length="24"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_WOONPLAATS]"
+                      name="A13_WOONPLAATS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_STRAATNAAM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_STRAATNAAM]"
+                      length="24"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_STRAATNAAM]"
+                      name="A13_STRAATNAAM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_GEMEENTECODE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_GEMEENTECODE]"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].Columns[A13_GEMEENTECODE]"
+                      name="A13_GEMEENTECODE"
+                      precision="4"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_POSTCODE]"
+                      dataType="wstr"
+                      length="7"
+                      name="A13_POSTCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_REEKSIND]"
+                      dataType="wstr"
+                      length="1"
+                      name="A13_REEKSIND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_BREEKPUNT_VAN]"
+                      dataType="numeric"
+                      name="A13_BREEKPUNT_VAN"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_BREEKPUNT_TEM]"
+                      dataType="numeric"
+                      name="A13_BREEKPUNT_TEM"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_WOONPLAATS]"
+                      dataType="wstr"
+                      length="24"
+                      name="A13_WOONPLAATS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_STRAATNAAM]"
+                      dataType="wstr"
+                      length="24"
+                      name="A13_STRAATNAAM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output].ExternalColumns[A13_GEMEENTECODE]"
+                      dataType="numeric"
+                      name="A13_GEMEENTECODE"
+                      precision="4" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_POSTCODE]"
+                      dataType="wstr"
+                      length="7"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_POSTCODE]"
+                      name="A13_POSTCODE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_REEKSIND]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_REEKSIND]"
+                      name="A13_REEKSIND" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_BREEKPUNT_VAN]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_BREEKPUNT_VAN]"
+                      name="A13_BREEKPUNT_VAN"
+                      precision="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_BREEKPUNT_TEM]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_BREEKPUNT_TEM]"
+                      name="A13_BREEKPUNT_TEM"
+                      precision="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_WOONPLAATS]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_WOONPLAATS]"
+                      name="A13_WOONPLAATS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_STRAATNAAM]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_STRAATNAAM]"
+                      name="A13_STRAATNAAM" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_GEMEENTECODE]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[A13_GEMEENTECODE]"
+                      name="A13_GEMEENTECODE"
+                      precision="4" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Destination - GEMEENTEN.Inputs[Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - GEMEENTEN.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task 1\Destination 1 - POSTCODES.Inputs[Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source 1 - POSTCODES.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{36F9FEF0-28D3-4785-A3FB-AFD141B5585C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{38297056-E877-444A-A3B8-DB6AD39414F7}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[GEMEENTEN] (&#xA;[N42_GEM_KODE] decimal(4,0),&#xA;[N42_GEM_NAAM] nvarchar(24)&#xA;)&#xA;GO&#xA;CREATE TABLE [dbo].[POSTCODES] (&#xA;[A13_POSTCODE] nvarchar(7),&#xA;[A13_REEKSIND] nvarchar(1),&#xA;[A13_BREEKPUNT_VAN] decimal(5,0),&#xA;[A13_BREEKPUNT_TEM] decimal(5,0),&#xA;[A13_WOONPLAATS] nvarchar(24),&#xA;[A13_STRAATNAAM] nvarchar(24),&#xA;[A13_GEMEENTECODE] decimal(4,0)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{0C738543-EE53-4343-9A07-DAAABF5CB4E8\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{0C738543-EE53-4343-9A07-DAAABF5CB4E8}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{0C738543-EE53-4343-9A07-DAAABF5CB4E8}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+</DTS:Executable>
