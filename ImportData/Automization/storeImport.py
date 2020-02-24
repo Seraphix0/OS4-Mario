@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Created on Sun Feb 23 2020
 
-This is a temporary script file.
+@author: Lu
 """
 import pyodbc 
-import os
 
 #initialization
 
