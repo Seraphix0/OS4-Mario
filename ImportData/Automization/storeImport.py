@@ -29,7 +29,7 @@ class Address:
 #todo change to access importData/Winkels Mario.txt
 #os.chdir("/Winkels Mario.txt")
 
-file1 = open('Winkels Mario.txt', 'r') 
+file1 = open('../Winkels Mario.txt', 'r') 
 Lines = file1.readlines() 
 
 ###########################
