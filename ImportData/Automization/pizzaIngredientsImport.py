@@ -32,5 +32,20 @@ for row in ingredient_products.itertuples():
     print(row[11])  #ingredientnaam
     print(row[12])  #pizzasaus_standaard
     print("")
-    params = (row[3], row[4], row[5], row[6], row[7], row[8], row[11], row[12])
-    #cursor.execute("{CALL InsertPizzaIngredient (?,?,?,?,?,?,?,?)}", params)
+
+    if row[2] is None:
+        categoryParams = (row[1], row[2], 0) 
+        cursor.execute("{CALL InsertCategory(?,?,?)", categoryParams)
+        cursor.execute("SELECT Id FROM Category WHERE Category.Name = ?", row[1])
+    else:
+        categoryParams = (row[1], row[2], 1) 
+        cursor.execute("{CALL InsertCategory(?,?,?)", categoryParams)
+        cursor.execute("SELECT Id FROM Category WHERE Category.Name = ?", row[2])
+
+    categoryRow = cursor.fetchone()
+
+    if categoryRow:
+        params = (row[3], row[4], row[5], row[6], categoryRow.Id, row[7], row[8], row[11], row[12])
+        cursor.execute("{CALL InsertPizzaIngredient (?,?,?,?,?,?,?,?)}", params)
+
+    cnxn.commit()

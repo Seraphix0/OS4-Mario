@@ -29,8 +29,22 @@ for row in misc_products.itertuples():
     print(row[6]) #spicy
     print(row[7]) #vegetarisch
     print("")
-    
-    params = (row[3], row[4], row[5], row[6], row[7])
-    #cursor.execute("{CALL InsertMiscProduct (?,?,?,?,?,?,?)}", params)
+
+    if row[2] is None:
+        categoryParams = (row[1], row[2], 0) 
+        cursor.execute("{CALL InsertCategory(?,?,?)", categoryParams)
+        cursor.execute("SELECT Id FROM Category WHERE Category.Name = ?", row[1])
+    else:
+        categoryParams = (row[1], row[2], 1) 
+        cursor.execute("{CALL InsertCategory(?,?,?)", categoryParams)
+        cursor.execute("SELECT Id FROM Category WHERE Category.Name = ?", row[2])
+
+    categoryRow = cursor.fetchone()
+
+    if categoryRow:
+        miscProductParams = (row[3], row[4], categoryRow.Id, row[5], row[6], row[7])
+        cursor.execute("{CALL InsertMiscProduct (?,?,?,?,?,?,?)}", miscProductParams)
+
+    cnxn.commit()
     
     
