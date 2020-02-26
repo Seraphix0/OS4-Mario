@@ -50,20 +50,13 @@ for x in range(0, len(Lines), 8):
     
     params = (obj.description, obj.street, obj.number, obj.city, obj.countryCode, obj.postalCode, obj.phone)
     cursor.execute("{CALL CreateRestaurant (?,?,?,?,?,?,?)}", params)
+    cnxn.commit()
     
     
     
     
 #########
 
-
-cursor.execute("SELECT * FROM Restaurant")
-row = cursor.fetchone()
-while row:
-    print(row)
-    row = cursor.fetchone()
-    
-    
 
 
 
