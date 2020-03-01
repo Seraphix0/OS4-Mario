@@ -19,9 +19,13 @@ cursor = cnxn.cursor()
 misc_products = pd.read_excel (r'../pizzabodems.xlsx')
 
 for row in misc_products.itertuples():
-    print(row[1]) #naam
-    print(row[2]) #diameter
-    print(row[3]) #omschrijving
-    print(row[4]) #toeslag
+    # print(row[1]) #naam
+    # print(row[2]) #diameter
+    # print(row[3]) #omschrijving
+    # print(row[4]) #toeslag
+    print('Inserting: ' + str(row))
+
     params = (row[1], row[2], row[3], row[4])
     cursor.execute("{CALL InsertPizzaBottom (?,?,?,?)}", params)
+    cnxn.commit()
+    print('Finished inserting row: ' + str(row[0]))
