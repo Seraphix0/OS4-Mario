@@ -1,0 +1,5 @@
+- CustomerAddressLink id toegevoegd en in order alleen CustomerAddressLinkId
+- Database schoonmaken, alles verwijderen en opnieuw met scripts invoeren.
+- Deliverer, DelivererAvailability, Availability mag weg. (Ook DelivererId in Order dus)
+- Waarom is VAT in Order?
+- Order -> van money naar float 
