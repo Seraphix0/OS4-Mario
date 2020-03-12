@@ -1,5 +1,19 @@
-# -*- coding: utf-8 -*-
+# Coding scheme: UTF-8
+import pyodbc
+import csv
 
+# Database connection parameters
+server = 'tcp:os4.database.windows.net'
+database = 'Mario'
+username = 'learningMachine'
+password = 'Oopdevils123'
+
+# Database connection initialization and cursor allocation
+cnxn = pyodbc.connect('DRIVER={ODBC Driver 11 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+cursor = cnxn.cursor()
+
+# Declarations
+# -----------------------------------------------------------
 class Order:
     def __init__(self, storeName, customerName, customerPhone, customerMail, address, city, placementDate, deliveryDate, deliveryTime, totalPrice, couponName, discount):
         self.storeName = storeName
@@ -58,15 +72,24 @@ def formatDate(dateRow: str):
     return "-".join(date)
 
 def insertOrder(Order):
-    return NotImplementedError
+    params = (Order.storeName, Order.customerName, Order.customerPhone, Order.customerMail, Order.city, Order.address, Order.placementDate, Order.deliveryDate, Order.deliveryTime, Order.totalPrice, Order.discount, Order.couponName)
+    cursor.execute("{CALL InsertOrder (?,?,?,?,?,?,?,?,?,?,?,?)}", params)
 
 def insertOrderItem(OrderItem):
-    return NotImplementedError
+    orderId = NotImplementedError
+    params = (orderId, OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName, OrderItem.price, OrderItem.quantity)
+    cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
-import csv
+def insertIngredientToOrderItem(ingredientName):
+    orderItemId = NotImplementedError
+    params = (orderItemId, ingredientName)
+    cursor.execute("{CALL InsertIngredientToOrderItem (?,?)}", params)
+# -----------------------------------------------------------
+
+# Thread execution
+# -----------------------------------------------------------
 filename = '../MarioOrderData_1000'
 extension= '.csv'
-
 with open(filename + extension, 'r', errors="ignore") as file:
     reader = csv.reader(file, delimiter=';')
     writer = csv.writer(open(filename + 'cleaned' + extension, 'w'))
@@ -80,8 +103,17 @@ with open(filename + extension, 'r', errors="ignore") as file:
             iterable = True
             continue
 
+        # Check if column 'Product' is not empty
         if row[10] != "":
+            # Check if column 'Winkelnaam' is not empty
             if row[0] != "":            
                 insertOrder(Order(row[0],row[1],row[2],row[3],row[4],row[5],row[5],row[6],row[7],row[18],row[19],row[20]))
-
             insertOrderItem(OrderItem(row[7], row[8], row[9], row[10], row[11]))
+            # Check if column 'Extra Ingredienten' is not empty
+            if row[15] != "":
+                insertIngredientToOrderItem(row[15])
+
+# Commit only if execution encountered no errors
+cnxn.commit()
+cnxn.close()
+# -----------------------------------------------------------
