@@ -41,9 +41,6 @@ Lines = file1.readlines()
 #@PostalCode
 #@PhoneNumber
 
-
-
-
 for x in range(0, len(Lines), 8):
     obj = Address(Lines[x], Lines[x+1], Lines[x+2], Lines[x+3], Lines[x+4],
                   Lines[x+5], Lines[x+6])
@@ -52,18 +49,4 @@ for x in range(0, len(Lines), 8):
     cursor.execute("{CALL CreateRestaurant (?,?,?,?,?,?,?)}", params)
     cnxn.commit()
     
-    
-    
-    
 #########
-
-
-
-
-    
-    
-    
-    
-    
-  
-  
