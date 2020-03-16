@@ -26,9 +26,9 @@ class Order:
         self.placementDate = formatDate(placementDate)
         self.deliveryDate = formatDate(deliveryDate)
         self.deliveryTime = deliveryTime
-        self.totalPrice = totalPrice[4,len(totalPrice)]
+        self.totalPrice = totalPrice[4: len(totalPrice)]
         self.couponName = couponName
-        self.discount = discount[4,len(discount)]
+        self.discount = discount[4: len(discount)]
 
 class OrderItem:
     def __init__(self, productName, doughName, pizzaSauce, price: str, quantity):
@@ -38,7 +38,7 @@ class OrderItem:
         self.price = price[4: len(price)]
         self.quantity = quantity
   
-def convertMonth(row) -> list:
+def convertMonth(row):
     if (len(row) > 2):
           if (row[2] == 'januari'):
               row[2] = '1'
@@ -68,9 +68,8 @@ def convertMonth(row) -> list:
 
 def formatDate(dateRow: str): 
     date = dateRow.split()
-    dateList: list = convertMonth(dateRow)
-    print(dateList)
-    dateList.pop(0)
+    date = convertMonth(dateRow)
+    print(date)
     return "-".join(date)
 
 def insertOrder(Order):
@@ -113,8 +112,8 @@ with open(filename, 'r', errors="ignore") as file:
         if row[10] != "":
             # Check if column 'Winkelnaam' is not empty
             if row[0] != "":            
-                insertOrder(Order(row[0],row[1],row[2],row[3],row[4],row[5],row[5],row[6],row[7],row[19],row[20],row[21]))
-            insertOrderItem(OrderItem(row[7], row[8], row[9], row[11], row[12]))
+                insertOrder(Order(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[8],row[9],row[19],row[20],row[21]))
+            insertOrderItem(OrderItem(row[10], row[11], row[12], row[13], row[15]))
             # Check if column 'Extra Ingredienten' is not empty
             if row[16] != "":
                 extraIngredients = row[16].split(",")
