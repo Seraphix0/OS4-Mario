@@ -45,9 +45,9 @@ def convertMonth(row) -> list:
               row[2] = '2'
           elif (row[2] == 'maart'):
               row[2] = '3'   
-          elif (row[2] == 'mei'):
-              row[2] = '4'
           elif (row[2] == 'april'):
+              row[2] = '4'
+          elif (row[2] == 'mei'):
               row[2] = '5'
           elif (row[2] == 'juni'):
               row[2] = '6'
@@ -67,7 +67,7 @@ def convertMonth(row) -> list:
 
 def formatDate(dateRow: str): 
     date = dateRow.split()
-    date = convertMonth(dateRow)                        
+    date = convertMonth(dateRow)
     date.pop(0)
     return "-".join(date)
 
@@ -76,12 +76,14 @@ def insertOrder(Order):
     cursor.execute("{CALL InsertOrder (?,?,?,?,?,?,?,?,?,?,?,?)}", params)
 
 def insertOrderItem(OrderItem):
-    orderId = NotImplementedError
+    cursor.execute("SELECT IDENT_CURRENT('Order')")
+    orderId = cursor.fetchone()
     params = (orderId, OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName, OrderItem.price, OrderItem.quantity)
     cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
 def insertIngredientToOrderItem(ingredientName):
-    orderItemId = NotImplementedError
+    cursor.execute("SELECT IDENT_CURRENT('OrderItem')")
+    orderItemId = cursor.fetchone()
     params = (orderItemId, ingredientName)
     cursor.execute("{CALL InsertIngredientToOrderItem (?,?)}", params)
 # -----------------------------------------------------------
@@ -111,6 +113,7 @@ with open(filename + extension, 'r', errors="ignore") as file:
             insertOrderItem(OrderItem(row[7], row[8], row[9], row[10], row[11]))
             # Check if column 'Extra Ingredienten' is not empty
             if row[15] != "":
+                extraIngredients = row[15].split(",")
                 insertIngredientToOrderItem(row[15])
 
 # Commit only if execution encountered no errors
