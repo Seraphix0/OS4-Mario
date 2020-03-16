@@ -68,8 +68,9 @@ def convertMonth(row) -> list:
 
 def formatDate(dateRow: str): 
     date = dateRow.split()
-    date = convertMonth(dateRow)
-    date.pop(0)
+    dateList: list = convertMonth(dateRow)
+    print(dateList)
+    dateList.pop(0)
     return "-".join(date)
 
 def insertOrder(Order):
@@ -112,19 +113,17 @@ with open(filename, 'r', errors="ignore") as file:
         if row[10] != "":
             # Check if column 'Winkelnaam' is not empty
             if row[0] != "":            
-                insertOrder(Order(row[0],row[1],row[2],row[3],row[4],row[5],row[5],row[6],row[7],row[18],row[19],row[20]))
-            insertOrderItem(OrderItem(row[7], row[8], row[9], row[10], row[11]))
+                insertOrder(Order(row[0],row[1],row[2],row[3],row[4],row[5],row[5],row[6],row[7],row[19],row[20],row[21]))
+            insertOrderItem(OrderItem(row[7], row[8], row[9], row[11], row[12]))
             # Check if column 'Extra Ingredienten' is not empty
-            if row[15] != "":
-                extraIngredients = row[15].split(",")
+            if row[16] != "":
+                extraIngredients = row[16].split(",")
                 for ingredientName in extraIngredients:
                     insertIngredientToOrderItem(ingredientName)
 
         cnxn.commit()
 
-
 cnxn.close()
 
 # Commit only if execution encountered no errors
-
 # -----------------------------------------------------------
