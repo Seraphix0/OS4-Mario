@@ -74,6 +74,7 @@ def formatDate(dateRow: str):
 def insertOrder(Order):
     params = (Order.storeName, Order.customerName, Order.customerPhone, Order.customerMail, Order.city, Order.address, Order.placementDate, Order.deliveryDate, Order.deliveryTime, Order.totalPrice, Order.discount, Order.couponName)
     cursor.execute("{CALL InsertOrder (?,?,?,?,?,?,?,?,?,?,?,?)}", params)
+    
 
 def insertOrderItem(OrderItem):
     cursor.execute("SELECT IDENT_CURRENT('Order')")
@@ -98,11 +99,12 @@ with open(filename + extension, 'r', errors="ignore") as file:
 
     iterable = False
     for row in reader:
+        print('1')
         # Locate column header row to determine index origin
-        if row[0 != "Winkelnaam"] and iterable != True:
-            continue
-        else:
+        if row[0 == "Winkelnaam"]:
             iterable = True
+            continue
+        elif iterable == False:
             continue
 
         # Check if column 'Product' is not empty
@@ -117,7 +119,11 @@ with open(filename + extension, 'r', errors="ignore") as file:
                 for ingredientName in extraIngredients:
                     insertIngredientToOrderItem(ingredientName)
 
-# Commit only if execution encountered no errors
-cnxn.commit()
+        cnxn.commit()
+
+
 cnxn.close()
+
+# Commit only if execution encountered no errors
+
 # -----------------------------------------------------------
