@@ -92,7 +92,7 @@ def insertIngredientToOrderItem(ingredientName):
 
 # Thread execution
 # -----------------------------------------------------------
-filename = 'ImportData/MarioOrderData01_10000.csv'
+filename = 'ImportData/MarioOrderDataTest_1000.csv'
 with open(filename, 'r', errors="ignore") as file:
     reader = csv.reader(file, delimiter=';')
 
@@ -101,13 +101,11 @@ with open(filename, 'r', errors="ignore") as file:
         if (row == []):
             continue
         # Locate column header row to determine index origin
-        if row[0] == "Winkelnaam":
-            print("winkelnaam")
-            if iterable != True:
-                print("iterable")
-            iterable = True
-            continue
-        else: 
+        if iterable != True:
+            print("iterable")
+            if row[0] == "Winkelnaam":
+                print("winkelnaam")
+                iterable = True
             continue
 
         # Check if column 'Product' is not empty

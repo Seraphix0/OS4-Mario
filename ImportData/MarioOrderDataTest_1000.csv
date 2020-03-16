@@ -1,0 +1,169 @@
+Mario bestellingen;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Let op! De vermelde prijzen zijn de prijzen ten tijde van de bestelling;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Winkelnaam;Klantnaam;TelefoonNr;Email;Adres;Woonplaats;Besteldatum;AfleverType;AfleverDatum;AfleverMoment;Product;PizzaBodem;PizzaSaus;Prijs;Bezorgkosten;Aantal;Extra IngrediÇ®nten;Prijs Extra IngrediÇ®nten;Regelprijs;Totaalprijs;Gebruikte Coupon;Coupon Korting;Te Betalen
+Middelburg;Johny ten Brinke;06-25480284;JohnytenBrinke@armyspy.com;Hooge Meestraat 88;Middelburg;woensdag 5 juni 2019;Bezorgen;woensdag 5 juni 2019;20:05;Creamy Bacon;Family XXL Pizza;Creme Fraiche;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 29,90;ƒ?ª 73,70;;ƒ?ª 0,00;ƒ?ª 73,70
+;;;;;;;;;;Shoarma;Italian Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;4;;ƒ?ª 0,00;ƒ?ª 43,80;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Amersfoort;Delal Eisses;06-51836739;DelalEisses@superrito.com;Haydnstraat 78;Amersfoort;maandag 30 april 2018;Afhalen;maandag 30 april 2018;20:59;Extravaganzza;Medium Pizza;Tomatensaus;ƒ?ª 7,95;;2;;ƒ?ª 0,00;ƒ?ª 15,90;ƒ?ª 72,55;;ƒ?ª 0,00;ƒ?ª 72,55
+;;;;;;;;;;Shoarma;Italian Pizza;Tomatensaus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;;;;
+;;;;;;;;;;Salame Speciale;Italian Pizza;Tomatensaus;ƒ?ª 6,95;;2;;ƒ?ª 0,00;ƒ?ª 15,90;;;;
+;;;;;;;;;;Tonno;Italian Pizza;Tomatensaus;ƒ?ª 6,95;;4;;ƒ?ª 0,00;ƒ?ª 31,80;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Sittard;Reduan Verdaasdonk;06-46223346;ReduanVerdaasdonk@jourrapide.com;Jos Klijnenlaan 69;Geleen;zondag 1 januari 2017;Bezorgen;zondag 1 januari 2017;20:48;Americana;Family XXL Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 27,90;ƒ?ª 72,70;25% korting op je bestelling;ƒ?ª 18,18;ƒ?ª 54,53
+;;;;;;;;;;Pollo Pomodore;Italian Pizza;Tomatensaus;ƒ?ª 8,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 23,90;;;;
+;;;;;;;;;;Salame Speciale;Italian Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 9,95;;;;
+;;;;;;;;;;Veggi;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 10,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Landgraaf;Kenrick Emons;06-21615619;KenrickEmons@jourrapide.com;Hovenstraat 120;Landgraaf;zaterdag 11 maart 2017;Bezorgen;zaterdag 11 maart 2017;20:03;Extravaganzza;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 23,90;ƒ?ª 23,90;;ƒ?ª 0,00;ƒ?ª 23,90
+;;;;;;;;;;;;;;;;;;;;;;
+Rotterdam Hoogvliet;Lahcen Vlijm;06-73567695;LahcenVlijm@gustr.com;Huniadijk 188;Rotterdam;maandag 20 november 2017;Afhalen;maandag 20 november 2017;18:33;BBQ Chicken Hawaii;Family XXL Pizza;Barbecue Saus;ƒ?ª 6,95;;1;;ƒ?ª 0,00;ƒ?ª 11,95;ƒ?ª 30,85;;ƒ?ª 0,00;ƒ?ª 30,85
+;;;;;;;;;;Tricolore;Italian Pizza;Creme Fraiche;ƒ?ª 8,95;;1;;ƒ?ª 0,00;ƒ?ª 9,95;;;;
+;;;;;;;;;;Creamy Bacon;Italian Pizza;Creme Fraiche;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Emmen;Pelin Kerkvliet;06-60362204;PelinKerkvliet@jourrapide.com;Koninginnepage 157;Emmen;donderdag 22 maart 2018;Afhalen;donderdag 22 maart 2018;20:31;Americana;Medium Pizza;Tomatensaus;ƒ?ª 6,95;;2;Bacon, Gorgonzola, Merguez, Salami;ƒ?ª 4,00;ƒ?ª 21,90;ƒ?ª 21,90;;ƒ?ª 0,00;ƒ?ª 21,90
+;;;;;;;;;;;;;;;;;;;;;;
+Scheveningen;Deen van Wel;06-67229041;DeenvanWel@gustr.com;Dennenlaan 105;Harderwijk;dinsdag 8 mei 2018;Bezorgen;dinsdag 8 mei 2018;18:51;BBQ Cannibale;Medium Pizza;Barbecue Saus;ƒ?ª 4,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 13,90;ƒ?ª 13,90;;ƒ?ª 0,00;ƒ?ª 13,90
+;;;;;;;;;;;;;;;;;;;;;;
+Eindhoven Gestel;Huy Bovens;06-37388259;HuyBovens@rhyta.com;Bergen op Zoomstraat 170;Eindhoven;donderdag 22 juni 2017;Bezorgen;donderdag 22 juni 2017;20:34;Supreme;Medium Pizza;Barbecue Saus;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 19,90;ƒ?ª 91,60;;ƒ?ª 0,00;ƒ?ª 91,60
+;;;;;;;;;;Bacon Gorgonzola;Large Pizza;Tomatensaus;ƒ?ª 8,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 29,90;;;;
+;;;;;;;;;;Hawaii;Italian Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 19,90;;;;
+;;;;;;;;;;Tonno;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Berkel en Rodenrijs;Vito de Bruijne;06-95232870;VitodeBruijne@cuvox.de;Huijgenslaan 143;Berkel en Rodenrijs;vrijdag 6 juli 2018;Bezorgen;vrijdag 6 juli 2018;20:57;Perfect Pepperoni;Medium Pizza;Tomatensaus;ƒ?ª 4,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 13,90;ƒ?ª 59,70;3e pizza gratis bij bezorgen;ƒ?ª 4,95;ƒ?ª 54,75
+;;;;;;;;;;Shoarma;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 23,90;;;;
+;;;;;;;;;;Caprese;Large Pizza;Tomatensaus;ƒ?ª 4,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Helmond;Tommie van Boxel;06-85698164;TommievanBoxel@teleworm.us;Helmondselaan 99;Helmond;woensdag 17 april 2019;Afhalen;woensdag 17 april 2019;18:21;Tonno;Italian Pizza;Tomatensaus;ƒ?ª 6,95;;1;;ƒ?ª 0,00;ƒ?ª 7,95;ƒ?ª 7,95;;ƒ?ª 0,00;ƒ?ª 7,95
+;;;;;;;;;;;;;;;;;;;;;;
+Rotterdam Schiebroek;Keenan van der Maat;06-88539264;KeenanvanderMaat@dayrep.com;Oude Watering 46;Rotterdam;dinsdag 13 maart 2018;Afhalen;dinsdag 13 maart 2018;20:09;Shoarma;Family XXL Pizza;Tomatensaus;ƒ?ª 7,95;;4;;ƒ?ª 0,00;ƒ?ª 51,80;ƒ?ª 51,80;;ƒ?ª 0,00;ƒ?ª 51,80
+;;;;;;;;;;;;;;;;;;;;;;
+Maarssen;Nica Brakel;06-74430429;NicaBrakel@teleworm.us;Straatweg 116;Maarssen;zondag 24 maart 2019;Afhalen;zondag 24 maart 2019;19:52;Funghi;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 4,95;;1;;ƒ?ª 0,00;ƒ?ª 6,95;ƒ?ª 22,85;;ƒ?ª 0,00;ƒ?ª 22,85
+;;;;;;;;;;Supreme;Medium Pizza;Barbecue Saus;ƒ?ª 7,95;;2;;ƒ?ª 0,00;ƒ?ª 15,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Rotterdam Noord;Christopher den Hartigh;06-20859313;ChristopherdenHartigh@gustr.com;Tijmweg 196;Hoogvliet;donderdag 17 januari 2019;Bezorgen;donderdag 17 januari 2019;19:30;Americana;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;ƒ?ª 43,80;3e pizza gratis bij bezorgen;ƒ?ª 0,00;ƒ?ª 43,80
+;;;;;;;;;;Beenham;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Soest;Laurens Tholen;06-84245798;LaurensTholen@cuvox.de;Theo Dobbehof 179;Soest;zaterdag 30 maart 2019;Afhalen;zaterdag 30 maart 2019;19:37;Four Cheese;Medium Pizza;Tomatensaus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 7,95;ƒ?ª 29,85;;ƒ?ª 0,00;ƒ?ª 29,85
+;;;;;;;;;;Veggi;Large Pizza;Tomatensaus;ƒ?ª 6,95;;2;;ƒ?ª 0,00;ƒ?ª 21,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Gorinchem;Jans Lau;06-97360753;JansLau@fleckens.hu;Chopinpad 99;Gorinchem;maandag 29 januari 2018;Afhalen;maandag 29 januari 2018;18:27;Funghi;Family XXL Pizza;Tomatensaus;ƒ?ª 4,95;;1;;ƒ?ª 0,00;ƒ?ª 9,95;ƒ?ª 21,90;25% korting op je bestelling;ƒ?ª 5,48;ƒ?ª 16,43
+;;;;;;;;;;Four Cheese;Large Pizza;Tomatensaus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 11,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Drachten;Manon Yavuz;06-10869762;ManonYavuz@rhyta.com;Westeinde 122;Nieuwleusen;maandag 18 maart 2019;Afhalen;maandag 18 maart 2019;16:30;BBQ Chicken Hawaii;Family XXL Pizza;Barbecue Saus;ƒ?ª 6,95;;1;;ƒ?ª 0,00;ƒ?ª 11,95;ƒ?ª 11,95;;ƒ?ª 0,00;ƒ?ª 11,95
+;;;;;;;;;;;;;;;;;;;;;;
+Rotterdam Mariniersweg;?ebnem Ramcharan;06-17945145;SebnemRamcharan@armyspy.com;Bramantestraat 129;Rotterdam;zondag 28 mei 2017;Bezorgen;zondag 28 mei 2017;16:36;Hot & Spicy;Italian Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 9,95;ƒ?ª 36,35;;ƒ?ª 0,00;ƒ?ª 36,35
+;;;;;;;;;;Creamy Bacon;Italian Pizza;Creme Fraiche;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 10,95;;;;
+;;;;;;;;;;Margaritha;Family XXL Pizza;Tomatensaus;ƒ?ª 4,95;ƒ?ª 2,00;1;Pepperoni, Knoflooksaus Swirl, Ham, Rode Ui;ƒ?ª 3,50;ƒ?ª 15,45;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Naaldwijk;Gregory van Aerle;06-19884446;GregoryvanAerle@fleckens.hu;Esdoorn 139;Naaldwijk;zaterdag 18 februari 2017;Afhalen;zaterdag 18 februari 2017;20:28;Funghi;Large Pizza;Tomatensaus;ƒ?ª 4,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;ƒ?ª 47,75;;ƒ?ª 0,00;ƒ?ª 47,75
+;;;;;;;;;;Tricolore;Medium Cheesy Crust Pizza;Creme Fraiche;ƒ?ª 8,95;;1;;ƒ?ª 0,00;ƒ?ª 10,95;;;;
+;;;;;;;;;;Shoarma;Medium Pizza;Tomatensaus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 7,95;;;;
+;;;;;;;;;;Shoarma;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 7,95;;2;;ƒ?ª 0,00;ƒ?ª 19,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Soest;Perry Ringelberg;06-23301757;PerryRingelberg@cuvox.de;Prins Bernhardlaan 191;Soest;dinsdag 15 augustus 2017;Afhalen;dinsdag 15 augustus 2017;19:13;Supreme;Italian Pizza;Barbecue Saus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;ƒ?ª 8,95;;ƒ?ª 0,00;ƒ?ª 8,95
+;;;;;;;;;;;;;;;;;;;;;;
+Maarssen;Augustinus Francis;06-59242418;AugustinusFrancis@jourrapide.com;Fazantenkamp 153;Maarssen;maandag 9 april 2018;Afhalen;maandag 9 april 2018;18:45;Caprese;Large Pizza;Tomatensaus;ƒ?ª 4,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;ƒ?ª 8,95;;ƒ?ª 0,00;ƒ?ª 8,95
+;;;;;;;;;;;;;;;;;;;;;;
+Uden;Mauritius van Bergen;06-12041885;MauritiusvanBergen@einrot.com;Biggenstraat 140;Uden;vrijdag 1 december 2017;Afhalen;vrijdag 1 december 2017;16:22;BBQ Cannibale;Family XXL Pizza;Barbecue Saus;ƒ?ª 4,95;;1;;ƒ?ª 0,00;ƒ?ª 9,95;ƒ?ª 29,85;2e pizza gratis bij afhalen;ƒ?ª 8,95;ƒ?ª 20,90
+;;;;;;;;;;Pollo Pomodore;Italian Pizza;Tomatensaus;ƒ?ª 8,95;;2;;ƒ?ª 0,00;ƒ?ª 19,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Heerhugowaard;Fokje Ottens;06-90330636;FokjeOttens@armyspy.com;Frans Halsstraat 179;Heerhugowaard;donderdag 7 februari 2019;Bezorgen;donderdag 7 februari 2019;19:59;Chicken Supreme;Family XXL Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 27,90;ƒ?ª 51,80;25% korting op je bestelling;ƒ?ª 12,95;ƒ?ª 38,85
+;;;;;;;;;;BBQ Chicken Hawaii;Family XXL Pizza;Barbecue Saus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 13,95;;;;
+;;;;;;;;;;Deluxe;Italian Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 9,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Geleen;ZoÇ®y Veldhuis;06-32470314;ZoeyVeldhuis@gustr.com;Nusterweg 137;Sittard;zondag 11 juni 2017;Afhalen;zondag 11 juni 2017;20:36;BBQ Mixed Grill;Medium Pizza;Barbecue Saus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 7,95;ƒ?ª 46,30;;ƒ?ª 0,00;ƒ?ª 46,30
+;;;;;;;;;;BBQ Chicken Hawaii;Family XXL Pizza;Barbecue Saus;ƒ?ª 6,95;;2;;ƒ?ª 0,00;ƒ?ª 23,90;;;;
+;;;;;;;;;;Chicken Supreme;Large Pizza;Tomatensaus;ƒ?ª 6,95;;1;Gorgonzola, Gehakt, Pepperoni, Honing Mosterdsaus;ƒ?ª 3,50;ƒ?ª 14,45;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Amersfoort Vathorst;Guy van Haandel;06-74817824;GuyvanHaandel@fleckens.hu;Het Langhuis 18;Amersfoort;zaterdag 26 augustus 2017;Bezorgen;zaterdag 26 augustus 2017;18:12;Tonno;Family XXL Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 13,95;ƒ?ª 13,95;;ƒ?ª 0,00;ƒ?ª 13,95
+;;;;;;;;;;;;;;;;;;;;;;
+Weert;Chermaine Jordans;06-16969135;ChermaineJordans@fleckens.hu;Slachterijstraat 143;Weert;maandag 10 april 2017;Afhalen;maandag 10 april 2017;16:34;Tricolore;Medium Cheesy Crust Pizza;Creme Fraiche;ƒ?ª 8,95;;4;;ƒ?ª 0,00;ƒ?ª 43,80;ƒ?ª 76,65;;ƒ?ª 0,00;ƒ?ª 76,65
+;;;;;;;;;;Tricolore;Medium Cheesy Crust Pizza;Creme Fraiche;ƒ?ª 8,95;;1;;ƒ?ª 0,00;ƒ?ª 10,95;;;;
+;;;;;;;;;;Bacon Gorgonzola;Large Pizza;Tomatensaus;ƒ?ª 8,95;;1;;ƒ?ª 0,00;ƒ?ª 12,95;;;;
+;;;;;;;;;;Hot & Spicy;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Amersfoort Vathorst;Jenno van Zessen;06-19811196;JennovanZessen@teleworm.us;Coelhorsterappelgaarde 172;Amersfoort;dinsdag 20 maart 2018;Bezorgen;dinsdag 20 maart 2018;18:38;Perfect Pepperoni;Medium Pizza;Tomatensaus;ƒ?ª 4,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 13,90;ƒ?ª 64,70;;ƒ?ª 0,00;ƒ?ª 64,70
+;;;;;;;;;;Beenham;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 10,95;;;;
+;;;;;;;;;;Four Cheese;Large Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 13,95;;;;
+;;;;;;;;;;Chicken Supreme;Large Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 25,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Hoorn;Sabrien Broekmeulen;06-72150940;SabrienBroekmeulen@dayrep.com;Butterwoud 125;Zwaag;vrijdag 17 maart 2017;Afhalen;vrijdag 17 maart 2017;16:17;Tonno;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;;2;Pepperoni, Chicken Kebab;ƒ?ª 3,00;ƒ?ª 23,90;ƒ?ª 23,90;25% korting op je bestelling;ƒ?ª 5,98;ƒ?ª 17,93
+;;;;;;;;;;;;;;;;;;;;;;
+Heerhugowaard;Aloys YalÇõin;06-40885076;AloysYalcin@cuvox.de;Lommerhof 135;Heerhugowaard;maandag 12 augustus 2019;Bezorgen;maandag 12 augustus 2019;18:59;Veggi;Large Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 25,90;ƒ?ª 47,80;;ƒ?ª 0,00;ƒ?ª 47,80
+;;;;;;;;;;Tonno;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Tilburg Thomas van Aquinostraat;Roxana Linskens;06-49744296;RoxanaLinskens@superrito.com;Van Hessen-Kasselstraat 107;Tilburg;donderdag 30 mei 2019;Bezorgen;donderdag 30 mei 2019;18:59;Salame Speciale;Medium Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 8,95;ƒ?ª 53,75;;ƒ?ª 0,00;ƒ?ª 53,75
+;;;;;;;;;;Shoarma;Medium Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 19,90;;;;
+;;;;;;;;;;Tricolore;Large Pizza;Creme Fraiche;ƒ?ª 8,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 14,95;;;;
+;;;;;;;;;;BBQ Mixed Grill;Medium Pizza;Barbecue Saus;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 9,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Heemskerk;Hamse van Duuren;06-59800247;HamsevanDuuren@cuvox.de;Jan van Rietwijkstraat 72;Heemskerk;vrijdag 24 mei 2019;Bezorgen;vrijdag 24 mei 2019;20:13;Shoarma;Family XXL Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 14,95;ƒ?ª 36,85;;ƒ?ª 0,00;ƒ?ª 36,85
+;;;;;;;;;;Funghi;Large Pizza;Tomatensaus;ƒ?ª 4,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Soest;Madelaine Wesselink;06-26968324;MadelaineWesselink@superrito.com;Minstreelpad 25;Soest;zondag 20 oktober 2019;Bezorgen;zondag 20 oktober 2019;16:02;Margaritha;Medium Pizza;Tomatensaus;ƒ?ª 4,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 6,95;ƒ?ª 88,55;;ƒ?ª 0,00;ƒ?ª 88,55
+;;;;;;;;;;Four Cheese;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 23,90;;;;
+;;;;;;;;;;Veggi;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;;;;
+;;;;;;;;;;Chicken Supreme;Medium Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;4;;ƒ?ª 0,00;ƒ?ª 35,80;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Amsterdam Ceintuurbaan;Naoual Braakhekke;06-48867633;NaoualBraakhekke@superrito.com;Hoekschewaardplein 67;Amsterdam;dinsdag 19 maart 2019;Afhalen;dinsdag 19 maart 2019;19:44;Veggi;Large Pizza;Tomatensaus;ƒ?ª 6,95;;2;;ƒ?ª 0,00;ƒ?ª 21,90;ƒ?ª 31,85;3e pizza gratis bij bezorgen;ƒ?ª 0,00;ƒ?ª 31,85
+;;;;;;;;;;Creamy Bacon;Medium Cheesy Crust Pizza;Creme Fraiche;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 9,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Den Helder;Dimas Kruit;06-86163836;DimasKruit@rhyta.com;Vogelzand 199;Den Helder;donderdag 28 februari 2019;Afhalen;donderdag 28 februari 2019;18:17;Tricolore;Family XXL Pizza;Creme Fraiche;ƒ?ª 8,95;;1;Groene Olijven, Kaasmix;ƒ?ª 2,50;ƒ?ª 16,45;ƒ?ª 16,45;;ƒ?ª 0,00;ƒ?ª 16,45
+;;;;;;;;;;;;;;;;;;;;;;
+Purmerend;Bento van Swieten;06-96792667;BentovanSwieten@teleworm.us;Sellingerbos 1;Purmerend;zaterdag 9 februari 2019;Afhalen;zaterdag 9 februari 2019;16:41;Hot & Spicy;Family XXL Pizza;Tomatensaus;ƒ?ª 6,95;;1;;ƒ?ª 0,00;ƒ?ª 11,95;ƒ?ª 11,95;;ƒ?ª 0,00;ƒ?ª 11,95
+;;;;;;;;;;;;;;;;;;;;;;
+Leeuwarden;Mine Lokerse;06-83381052;MineLokerse@dayrep.com;Herweystate 146;Leeuwarden;vrijdag 8 september 2017;Bezorgen;vrijdag 8 september 2017;18:32;Four Cheese;Italian Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 10,95;ƒ?ª 95,65;3e pizza gratis bij bezorgen;ƒ?ª 7,95;ƒ?ª 87,70
+;;;;;;;;;;Tricolore;Medium Cheesy Crust Pizza;Creme Fraiche;ƒ?ª 8,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 25,90;;;;
+;;;;;;;;;;BBQ Mixed Grill;Medium Pizza;Barbecue Saus;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 19,90;;;;
+;;;;;;;;;;Supreme;Family XXL Pizza;Barbecue Saus;ƒ?ª 7,95;ƒ?ª 2,00;2;Spaanse Pepers, Spaanse Pepers, Pepperoni, Tonijn;ƒ?ª 4,50;ƒ?ª 38,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Almelo;Bionda Bakkenes;06-67257510;BiondaBakkenes@armyspy.com;Laan van Biel 132;Almelo;woensdag 20 december 2017;Afhalen;woensdag 20 december 2017;20:35;Pollo Pomodore;Family XXL Pizza;Tomatensaus;ƒ?ª 8,95;;1;;ƒ?ª 0,00;ƒ?ª 13,95;ƒ?ª 22,90;;ƒ?ª 0,00;ƒ?ª 22,90
+;;;;;;;;;;Shoarma;Italian Pizza;Tomatensaus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Dordrecht Van Oldenbarneveltplein;Hanan Diender;06-96959178;HananDiender@dayrep.com;Louise de Colignystraat 35;Dordrecht;maandag 17 juli 2017;Bezorgen;maandag 17 juli 2017;18:43;Extravaganzza;Medium Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 19,90;ƒ?ª 19,90;;ƒ?ª 0,00;ƒ?ª 19,90
+;;;;;;;;;;;;;;;;;;;;;;
+Tilburg Thomas van Aquinostraat;Ger van Zuilen;06-50212831;GervanZuilen@armyspy.com;Ruwenberg 97;Udenhout;dinsdag 6 juni 2017;Afhalen;dinsdag 6 juni 2017;19:24;Deluxe;Medium Pizza;Tomatensaus;ƒ?ª 6,95;;1;;ƒ?ª 0,00;ƒ?ª 6,95;ƒ?ª 40,80;;ƒ?ª 0,00;ƒ?ª 40,80
+;;;;;;;;;;BBQ Cannibale;Family XXL Pizza;Barbecue Saus;ƒ?ª 4,95;;1;;ƒ?ª 0,00;ƒ?ª 9,95;;;;
+;;;;;;;;;;Chicken Supreme;Family XXL Pizza;Tomatensaus;ƒ?ª 6,95;;1;;ƒ?ª 0,00;ƒ?ª 11,95;;;;
+;;;;;;;;;;Four Cheese;Large Pizza;Tomatensaus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 11,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Helmond;Luciana Versteege;06-63116066;LucianaVersteege@superrito.com;Wethouder van Wellaan 5;Helmond;vrijdag 26 juli 2019;Afhalen;vrijdag 26 juli 2019;17:16;Tonno;Large Pizza;Tomatensaus;ƒ?ª 6,95;;2;;ƒ?ª 0,00;ƒ?ª 21,90;ƒ?ª 21,90;;ƒ?ª 0,00;ƒ?ª 21,90
+;;;;;;;;;;;;;;;;;;;;;;
+Soest;Iza Barth;06-31604699;IzaBarth@cuvox.de;Aviatik 28;Soesterberg;zaterdag 20 juli 2019;Bezorgen;zaterdag 20 juli 2019;16:20;BBQ Chicken Hawaii;Medium Cheesy Crust Pizza;Barbecue Saus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;ƒ?ª 65,75;3e pizza gratis bij bezorgen;ƒ?ª 7,95;ƒ?ª 57,80
+;;;;;;;;;;Creamy Bacon;Family XXL Pizza;Creme Fraiche;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 14,95;;;;
+;;;;;;;;;;BBQ Mixed Grill;Family XXL Pizza;Barbecue Saus;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 14,95;;;;
+;;;;;;;;;;Creamy Bacon;Large Pizza;Creme Fraiche;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 13,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Eindhoven Gestel;Djairo Bazelmans;06-62926719;DjairoBazelmans@fleckens.hu;Herman Heyermanslaan 35;Eindhoven;woensdag 24 januari 2018;Bezorgen;woensdag 24 januari 2018;17:05;Four Cheese;Medium Pizza;Tomatensaus;ƒ?ª 7,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 19,90;ƒ?ª 43,80;25% korting op je bestelling;ƒ?ª 10,95;ƒ?ª 32,85
+;;;;;;;;;;Supreme;Italian Pizza;Barbecue Saus;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 10,95;;;;
+;;;;;;;;;;BBQ Chicken Hawaii;Large Pizza;Barbecue Saus;ƒ?ª 6,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 12,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Berkel en Rodenrijs;Vito de Bruijne;06-95232870;VitodeBruijne@cuvox.de;Huijgenslaan 143;Berkel en Rodenrijs;donderdag 13 april 2017;Afhalen;donderdag 13 april 2017;19:17;Shoarma;Family XXL Pizza;Tomatensaus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 12,95;ƒ?ª 99,60;;ƒ?ª 0,00;ƒ?ª 99,60
+;;;;;;;;;;Supreme;Family XXL Pizza;Barbecue Saus;ƒ?ª 7,95;;2;;ƒ?ª 0,00;ƒ?ª 25,90;;;;
+;;;;;;;;;;BBQ Mixed Grill;Large Pizza;Barbecue Saus;ƒ?ª 7,95;;4;;ƒ?ª 0,00;ƒ?ª 47,80;;;;
+;;;;;;;;;;Tricolore;Large Pizza;Creme Fraiche;ƒ?ª 8,95;;1;;ƒ?ª 0,00;ƒ?ª 12,95;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Nieuwegein;Ebony Sollie;06-23056976;EbonySollie@cuvox.de;De Liesbosch 6;Nieuwegein;maandag 7 januari 2019;Bezorgen;maandag 7 januari 2019;18:08;Salame Speciale;Italian Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;Ham, Gorgonzola, Spinazie, Salami;ƒ?ª 4,00;ƒ?ª 27,90;ƒ?ª 169,45;2e pizza gratis bij afhalen;ƒ?ª 0,00;ƒ?ª 169,45
+;;;;;;;;;;Tonno;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;1;Gorgonzola;ƒ?ª 1,00;ƒ?ª 11,95;;;;
+;;;;;;;;;;Pollo Pomodore;Large Pizza;Tomatensaus;ƒ?ª 8,95;ƒ?ª 2,00;4;Groene Olijven, Basilicum, Rode Ui;ƒ?ª 2,50;ƒ?ª 69,80;;;;
+;;;;;;;;;;BBQ Mixed Grill;Family XXL Pizza;Barbecue Saus;ƒ?ª 7,95;ƒ?ª 2,00;4;;ƒ?ª 0,00;ƒ?ª 59,80;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Den Haag Torenstraat;Emmelien Hogewoning;06-81061842;EmmelienHogewoning@cuvox.de;Stroyenborchdreef 102;Utrecht;zaterdag 15 juni 2019;Afhalen;zaterdag 15 juni 2019;16:27;BBQ Cannibale;Large Pizza;Barbecue Saus;ƒ?ª 4,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;ƒ?ª 34,85;;ƒ?ª 0,00;ƒ?ª 34,85
+;;;;;;;;;;Shoarma;Family XXL Pizza;Tomatensaus;ƒ?ª 7,95;;2;;ƒ?ª 0,00;ƒ?ª 25,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Groningen Paddepoel;Joes van Staveren;06-62229204;JoesvanStaveren@jourrapide.com;Oosterstraat 48;Groningen;woensdag 25 december 2019;Afhalen;woensdag 25 december 2019;20:57;Tricolore;Medium Pizza;Creme Fraiche;ƒ?ª 8,95;;1;;ƒ?ª 0,00;ƒ?ª 8,95;ƒ?ª 44,80;;ƒ?ª 0,00;ƒ?ª 44,80
+;;;;;;;;;;Hot & Spicy;Family XXL Pizza;Tomatensaus;ƒ?ª 6,95;;3;;ƒ?ª 0,00;ƒ?ª 35,85;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Leiden;Gerrit-Jan Ratering;06-26653563;Gerrit-JanRatering@fleckens.hu;Meermanshof 183;Leiden;vrijdag 14 september 2018;Afhalen;vrijdag 14 september 2018;17:09;Four Cheese;Medium Pizza;Tomatensaus;ƒ?ª 7,95;;1;;ƒ?ª 0,00;ƒ?ª 7,95;ƒ?ª 21,85;;ƒ?ª 0,00;ƒ?ª 21,85
+;;;;;;;;;;Caprese;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 4,95;;2;;ƒ?ª 0,00;ƒ?ª 13,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Landgraaf;Anne-Loes Patty;06-78330396;Anne-LoesPatty@teleworm.us;Gateweiden 133;Landgraaf;woensdag 19 juni 2019;Afhalen;woensdag 19 juni 2019;18:31;Deluxe;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;;2;;ƒ?ª 0,00;ƒ?ª 17,90;ƒ?ª 42,75;;ƒ?ª 0,00;ƒ?ª 42,75
+;;;;;;;;;;Perfect Pepperoni;Medium Pizza;Tomatensaus;ƒ?ª 4,95;;1;;ƒ?ª 0,00;ƒ?ª 4,95;;;;
+;;;;;;;;;;BBQ Cannibale;Family XXL Pizza;Barbecue Saus;ƒ?ª 4,95;;2;;ƒ?ª 0,00;ƒ?ª 19,90;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Utrecht Marnixlaan;Cherina Frings;06-50565486;CherinaFrings@dayrep.com;Livingstonelaan 46;Utrecht;dinsdag 3 januari 2017;Bezorgen;dinsdag 3 januari 2017;18:53;Hot & Spicy;Medium Cheesy Crust Pizza;Tomatensaus;ƒ?ª 6,95;ƒ?ª 2,00;2;;ƒ?ª 0,00;ƒ?ª 21,90;ƒ?ª 69,70;ƒ?ª 2,- Korting op een bestelling vanaf ƒ?ª 25,-;ƒ?ª 2,00;ƒ?ª 67,70
+;;;;;;;;;;Perfect Pepperoni;Family XXL Pizza;Tomatensaus;ƒ?ª 4,95;ƒ?ª 2,00;4;;ƒ?ª 0,00;ƒ?ª 47,80;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+Rotterdam Mariniersweg;Arja Treurniet;06-10050046;ArjaTreurniet@jourrapide.com;Johan Huizingastraat 7;Rotterdam;zaterdag 27 april 2019;Bezorgen;zaterdag 27 april 2019;16:50;Supreme;Medium Cheesy Crust Pizza;Barbecue Saus;ƒ?ª 7,95;ƒ?ª 2,00;1;;ƒ?ª 0,00;ƒ?ª 11,95;ƒ?ª 67,75;ƒ?ª 2,- Korting op een bestelling vanaf ƒ?ª 25,-;ƒ?ª 2,00;ƒ?ª 65,75
