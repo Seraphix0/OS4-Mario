@@ -34,7 +34,7 @@ class OrderItem:
         self.productName = productName
         self.doughName = doughName
         self.pizzaSauce = pizzaSauce
-        self.price = price[4,len(price)]
+        self.price = price[4: len(price)]
         self.quantity = quantity
   
 def convertMonth(row) -> list:
@@ -77,15 +77,15 @@ def insertOrder(Order):
     
 
 def insertOrderItem(OrderItem):
-    cursor.execute("SELECT IDENT_CURRENT('Order')")
-    orderId = cursor.fetchone()
-    params = (orderId, OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName, OrderItem.price, OrderItem.quantity)
+    cursor.execute("SELECT IDENT_CURRENT('Order') as Id")
+    order = cursor.fetchone()
+    params = (order.Id, OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName, OrderItem.price, OrderItem.quantity)
     cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
 def insertIngredientToOrderItem(ingredientName):
-    cursor.execute("SELECT IDENT_CURRENT('OrderItem')")
-    orderItemId = cursor.fetchone()
-    params = (orderItemId, ingredientName)
+    cursor.execute("SELECT IDENT_CURRENT('OrderItem') as Id")
+    orderItem = cursor.fetchone()
+    params = (orderItem.Id, ingredientName)
     cursor.execute("{CALL InsertIngredientToOrderItem (?,?)}", params)
 # -----------------------------------------------------------
 
