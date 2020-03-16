@@ -1,7 +1,6 @@
 # Coding scheme: UTF-8
 import pyodbc
 import csv
-import json
 
 # Database connection parameters
 server = 'tcp:os4.database.windows.net'
@@ -79,7 +78,6 @@ def insertOrder(Order):
 def insertOrderItem(OrderItem):
     cursor.execute("SELECT IDENT_CURRENT('Order') as Id")
     order = cursor.fetchone()
-    print(json.dumps(OrderItem))
     params = (order.Id, OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName, OrderItem.price, OrderItem.quantity)
     cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
