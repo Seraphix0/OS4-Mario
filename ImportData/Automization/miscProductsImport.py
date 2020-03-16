@@ -33,19 +33,19 @@ for row in misc_products.itertuples():
     if isinstance(row[5], float) == False:
         print('1: Skipping row: ' + str(row[0]))
         continue
-    elif isinstance(row[1], unicode) == False or isinstance(row[3], unicode) == False:
+    elif isinstance(row[1], str) == False or isinstance(row[3], str) == False:
         print('2: Skipping row: ' + str(row[0]))
         continue
 
     description = 'Geen productomschrijving'
-    if isinstance(row[4], unicode):
+    if isinstance(row[4], str):
         description = row[4]
 
     if row[2] is None:
         categoryParams = (row[1], row[2], 0) 
         cursor.execute("{CALL InsertCategory(?,?,?)}", categoryParams)
         cursor.execute("SELECT Id FROM Category WHERE Category.Name = ?", row[1])
-    elif isinstance(row[2], unicode):
+    elif isinstance(row[2], str):
         categoryParams = (row[1], row[2], 1) 
         cursor.execute("{CALL InsertCategory(?,?,?)}", categoryParams)
         cursor.execute("SELECT Id FROM Category WHERE Category.Name = ?", row[2])
@@ -57,7 +57,7 @@ for row in misc_products.itertuples():
     isVegetarian = None
 
     # Spicy en vegetarisch omzetten naar een bit
-    if isinstance(row[6], unicode):
+    if isinstance(row[6], str):
         if row[6] == 'Ja':
             isSpicy = 1
         elif row[6] == 'Nee':
@@ -65,7 +65,7 @@ for row in misc_products.itertuples():
     else:
         print('3: Skipping row: ' + str(row[0]))
 
-    if isinstance(row[7], unicode):
+    if isinstance(row[7], str):
         if row[7] == 'Ja':
             isVegetarian = 1
         elif row[7] == 'Nee':
