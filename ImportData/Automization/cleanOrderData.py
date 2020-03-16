@@ -114,7 +114,8 @@ with open(filename + extension, 'r', errors="ignore") as file:
             # Check if column 'Extra Ingredienten' is not empty
             if row[15] != "":
                 extraIngredients = row[15].split(",")
-                insertIngredientToOrderItem(row[15])
+                for ingredientName in extraIngredients:
+                    insertIngredientToOrderItem(ingredientName)
 
 # Commit only if execution encountered no errors
 cnxn.commit()
