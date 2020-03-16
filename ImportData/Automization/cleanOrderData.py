@@ -1,6 +1,7 @@
 # Coding scheme: UTF-8
 import pyodbc
 import csv
+import json
 
 # Database connection parameters
 server = 'tcp:os4.database.windows.net'
@@ -75,10 +76,10 @@ def insertOrder(Order):
     params = (Order.storeName, Order.customerName, Order.customerPhone, Order.customerMail, Order.city, Order.address, Order.placementDate, Order.deliveryDate, Order.deliveryTime, Order.totalPrice, Order.discount, Order.couponName)
     cursor.execute("{CALL InsertOrder (?,?,?,?,?,?,?,?,?,?,?,?)}", params)
     
-
 def insertOrderItem(OrderItem):
     cursor.execute("SELECT IDENT_CURRENT('Order') as Id")
     order = cursor.fetchone()
+    print(json.dumps(OrderItem))
     params = (order.Id, OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName, OrderItem.price, OrderItem.quantity)
     cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
@@ -91,20 +92,22 @@ def insertIngredientToOrderItem(ingredientName):
 
 # Thread execution
 # -----------------------------------------------------------
-filename = '../MarioOrderData_1000'
-extension= '.csv'
-with open(filename + extension, 'r', errors="ignore") as file:
+filename = 'ImportData/MarioOrderData01_10000.csv'
+with open(filename, 'r', errors="ignore") as file:
     reader = csv.reader(file, delimiter=';')
-    writer = csv.writer(open(filename + 'cleaned' + extension, 'w'))
 
     iterable = False
     for row in reader:
-        print('1')
+        if (row == []):
+            continue
         # Locate column header row to determine index origin
-        if row[0 == "Winkelnaam"]:
+        if row[0] == "Winkelnaam":
+            print("winkelnaam")
+            if iterable != True:
+                print("iterable")
             iterable = True
             continue
-        elif iterable == False:
+        else: 
             continue
 
         # Check if column 'Product' is not empty
