@@ -67,8 +67,8 @@ def convertMonth(row):
 
 def formatDate(dateRow: str): 
     date = dateRow.split()
-    date = convertMonth(dateRow)
-    print(date)
+    date = convertMonth(date)
+    date.pop(0)
     return "-".join(date)
 
 def insertOrder(Order):
@@ -121,6 +121,4 @@ with open(filename, 'r', errors="ignore") as file:
         cnxn.commit()
 
 cnxn.close()
-
-# Commit only if execution encountered no errors
 # -----------------------------------------------------------
