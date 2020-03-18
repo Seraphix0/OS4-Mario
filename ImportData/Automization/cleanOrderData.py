@@ -12,6 +12,7 @@ password = 'Oopdevils123'
 cnxn = pyodbc.connect(
     'DRIVER={ODBC Driver 11 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
 cursor = cnxn.cursor()
+iterableTest = False
 
 
 # Declarations
@@ -82,7 +83,7 @@ def insertOrder(Order):
     params = (Order.storeName, Order.customerName, Order.customerPhone, Order.customerMail, Order.city, Order.address,
               Order.placementDate, Order.deliveryDate, Order.deliveryTime, Order.totalPrice.replace(",", "."),
               Order.discount.replace(",", "."), Order.couponName)
-    print('order params: ' + str(params))
+    #print('order params: ' + str(params))
     cursor.execute("{CALL InsertOrder (?,?,?,?,?,?,?,?,?,?,?,?)}", params)
 
 
@@ -93,7 +94,7 @@ def insertOrderItem(OrderItem):
         int(order.Id), OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName,
         OrderItem.price.replace(",", "."),
         OrderItem.quantity)
-    print('orderitem params: ' + str(params))
+    #print('orderitem params: ' + str(params))
     cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
 
@@ -101,8 +102,27 @@ def insertIngredientToOrderItem(ingredientName):
     cursor.execute("SELECT IDENT_CURRENT('OrderItem') as Id")
     orderItem = cursor.fetchone()
     params = (int(orderItem.Id), ingredientName)
-    print('ingredient params: ' + str(params))
+    #print('ingredient params: ' + str(params))
     cursor.execute("{CALL InsertIngredientToOrderItem (?,?)}", params)
+
+
+def processRow(row):
+    print('current row: ' + str(row))
+    # Check if column 'Product' is not empty
+
+    if row[10] != "":
+        # Check if column 'Winkelnaam' is not empty
+        if row[0] != "":
+            insertOrder(Order(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], row[9], row[19], row[20],
+                              row[21]))
+
+        insertOrderItem(OrderItem(row[10], row[11], row[12], row[13], row[15]))
+        # Check if column 'Extra Ingredienten' is not empty
+        if row[16] != "":
+            extraIngredients = row[16].split(",")
+            for ingredientName in extraIngredients:
+                insertIngredientToOrderItem(ingredientName)
+    cnxn.commit()
 
 
 # -----------------------------------------------------------
@@ -113,40 +133,27 @@ filename = '../MarioOrderDataTest_1000.csv'
 with open(filename, 'r', errors="ignore") as file:
     reader = csv.reader(file, delimiter=';')
 
-    iterable = False
     for row in reader:
-        if (row == []):
+        if not row:
             continue
         # Locate column header row to determine index origin
-        if not iterable:
-            print(str(row[0]) + ' ' + str(type(row[0])))
+        if not iterableTest:
             if row[0] == "Winkelnaam":
-                iterable = True
-
-            continue
-
-        print('current row: ' + str(row))
-        # Check if column 'Product' is not empty
-        if row[10] != "":
-            # Check if column 'Winkelnaam' is not empty
-            if row[0] != "":
+                iterableTest = True
+                continue
+            elif row[0] != '' and row[1] != '' and row[2] != '' and row[3] != '' and row[4] != '':
+                iterableTest = True
                 try:
-                    insertOrder(
-                        Order(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], row[9], row[19], row[20],
-                              row[21]))
+                    processRow(row)
                 except:
-                    print('Skipped row: ' + str(row))
-                    iterable = False
-                    continue
-            
-            insertOrderItem(OrderItem(row[10], row[11], row[12], row[13], row[15]))
-            # Check if column 'Extra Ingredienten' is not empty
-            if row[16] != "":
-                extraIngredients = row[16].split(",")
-                for ingredientName in extraIngredients:
-                    insertIngredientToOrderItem(ingredientName)
-
-        cnxn.commit()
+                    print("Skipped row: " + str(row))
+                    iterableTest = False
+        else:
+            try:
+                processRow(row)
+            except:
+                print("Skipped row: " + str(row))
+                iterableTest = False
 
 cnxn.close()
 # -----------------------------------------------------------
