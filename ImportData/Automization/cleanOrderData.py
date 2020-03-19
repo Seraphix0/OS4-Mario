@@ -1,6 +1,7 @@
 # Coding scheme: UTF-8
 import pyodbc
 import csv
+import time
 
 # Database connection parameters
 server = 'tcp:os4.database.windows.net'
@@ -83,7 +84,7 @@ def insertOrder(Order):
     params = (Order.storeName, Order.customerName, Order.customerPhone, Order.customerMail, Order.city, Order.address,
               Order.placementDate, Order.deliveryDate, Order.deliveryTime, Order.totalPrice.replace(",", "."),
               Order.discount.replace(",", "."), Order.couponName)
-    print('order params: ' + str(params))
+    # print('order params: ' + str(params))
     cursor.execute("{CALL InsertOrder (?,?,?,?,?,?,?,?,?,?,?,?)}", params)
 
 
@@ -94,7 +95,10 @@ def insertOrderItem(OrderItem):
         int(order[0]), OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName,
         OrderItem.price.replace(",", "."),
         OrderItem.quantity)
-    print('orderitem params: ' + str(params))
+
+    cursor.execute("SELECT * FROM [Order] WHERE [Order].Id = " + str(int(order[0])))
+
+    # print('orderitem params: ' + str(params))
     cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
 
@@ -102,7 +106,7 @@ def insertIngredientToOrderItem(ingredientName):
     cursor.execute("SELECT IDENT_CURRENT('OrderItem') as Id")
     orderItem = cursor.fetchone()
     params = (int(orderItem[0]), ingredientName)
-    #print('ingredient params: ' + str(params))
+    # print('ingredient params: ' + str(params))
     cursor.execute("{CALL InsertIngredientToOrderItem (?,?)}", params)
 
 
@@ -113,8 +117,11 @@ def processRow(row):
     if row[10] != "":
         # Check if column 'Winkelnaam' is not empty
         if row[0] != "":
-            insertOrder(Order(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], row[9], row[19], row[20],
+            try:
+                insertOrder(Order(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], row[9], row[19], row[20],
                               row[21]))
+            except Exception as exception:
+                raise exception
 
         insertOrderItem(OrderItem(row[10], row[11], row[12], row[13], row[15]))
         # Check if column 'Extra Ingredienten' is not empty
@@ -129,10 +136,12 @@ def processRow(row):
 
 # Thread execution
 # -----------------------------------------------------------
-filename = '../MarioOrderDataTest_1000.csv'
+filename = '../MarioOrderData01_10000.csv'
+startTime = time.time()
+rowsProcessed = 0
+failedRows = 0
 with open(filename, 'r', errors="ignore") as file:
     reader = csv.reader(file, delimiter=';')
-
     for row in reader:
         if not row:
             continue
@@ -141,21 +150,33 @@ with open(filename, 'r', errors="ignore") as file:
             if row[0] == "Winkelnaam":
                 iterableTest = True
                 continue
-            elif row[0] != '' and row[1] != '' and row[2] != '' and row[3] != '' and row[4] != '':
+            elif row[0] != '':
                 iterableTest = True
                 try:
+                    rowsProcessed += 1
                     processRow(row)
                 except Exception as e:
                     print(str(e))
-                    print("Skipped row: " + str(row))
+                    print("skipped row: " + str(row))
+                    failedRows += 1
                     iterableTest = False
         else:
             try:
+                rowsProcessed += 1
                 processRow(row)
             except Exception as e:
                 print(str(e))
-                print("Skipped row: " + str(row))
+                print("skipped row: " + str(row))
+
+                failedRows += 1
                 iterableTest = False
+
+endTime = time.time()
+diffTime = endTime - startTime
+
+print("Amount of rows processed: " + str(rowsProcessed))
+print("Amount of rows failed to process: " + str(failedRows))
+print("Script time: " + str(diffTime) + " seconds")
 
 cnxn.close()
 # -----------------------------------------------------------
