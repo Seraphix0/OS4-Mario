@@ -46,23 +46,23 @@ class OrderItem:
 def convertMonth(row):
     if (len(row) > 2):
         if (row[2] == 'januari'):
-            row[2] = '1'
+            row[2] = '01'
         elif (row[2] == 'februari'):
-            row[2] = '2'
+            row[2] = '02'
         elif (row[2] == 'maart'):
-            row[2] = '3'
+            row[2] = '03'
         elif (row[2] == 'april'):
-            row[2] = '4'
+            row[2] = '04'
         elif (row[2] == 'mei'):
-            row[2] = '5'
+            row[2] = '05'
         elif (row[2] == 'juni'):
-            row[2] = '6'
+            row[2] = '06'
         elif (row[2] == 'juli'):
-            row[2] = '7'
+            row[2] = '07'
         elif (row[2] == 'augustus'):
-            row[2] = '8'
+            row[2] = '08'
         elif (row[2] == 'september'):
-            row[2] = '9'
+            row[2] = '09'
         elif (row[2] == 'oktober'):
             row[2] = '10'
         elif (row[2] == 'november'):
@@ -91,7 +91,7 @@ def insertOrderItem(OrderItem):
     cursor.execute("SELECT IDENT_CURRENT('Order') as Id")
     order = cursor.fetchone()
     params = (
-        int(order.Id), OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName,
+        order[0], OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName,
         OrderItem.price.replace(",", "."),
         OrderItem.quantity)
     #print('orderitem params: ' + str(params))
@@ -101,7 +101,7 @@ def insertOrderItem(OrderItem):
 def insertIngredientToOrderItem(ingredientName):
     cursor.execute("SELECT IDENT_CURRENT('OrderItem') as Id")
     orderItem = cursor.fetchone()
-    params = (int(orderItem.Id), ingredientName)
+    params = (orderItem[0], ingredientName)
     #print('ingredient params: ' + str(params))
     cursor.execute("{CALL InsertIngredientToOrderItem (?,?)}", params)
 
@@ -145,13 +145,15 @@ with open(filename, 'r', errors="ignore") as file:
                 iterableTest = True
                 try:
                     processRow(row)
-                except:
+                except Exception as e:
+                    print(str(e))
                     print("Skipped row: " + str(row))
                     iterableTest = False
         else:
             try:
                 processRow(row)
-            except:
+            except Exception as e:
+                print(str(e))
                 print("Skipped row: " + str(row))
                 iterableTest = False
 
