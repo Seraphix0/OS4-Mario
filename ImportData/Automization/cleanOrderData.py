@@ -83,7 +83,7 @@ def insertOrder(Order):
     params = (Order.storeName, Order.customerName, Order.customerPhone, Order.customerMail, Order.city, Order.address,
               Order.placementDate, Order.deliveryDate, Order.deliveryTime, Order.totalPrice.replace(",", "."),
               Order.discount.replace(",", "."), Order.couponName)
-    #print('order params: ' + str(params))
+    print('order params: ' + str(params))
     cursor.execute("{CALL InsertOrder (?,?,?,?,?,?,?,?,?,?,?,?)}", params)
 
 
@@ -91,17 +91,17 @@ def insertOrderItem(OrderItem):
     cursor.execute("SELECT IDENT_CURRENT('Order') as Id")
     order = cursor.fetchone()
     params = (
-        order[0], OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName,
+        int(order[0]), OrderItem.productName, OrderItem.pizzaSauce, OrderItem.doughName,
         OrderItem.price.replace(",", "."),
         OrderItem.quantity)
-    #print('orderitem params: ' + str(params))
+    print('orderitem params: ' + str(params))
     cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
 
 def insertIngredientToOrderItem(ingredientName):
     cursor.execute("SELECT IDENT_CURRENT('OrderItem') as Id")
     orderItem = cursor.fetchone()
-    params = (orderItem[0], ingredientName)
+    params = (int(orderItem[0]), ingredientName)
     #print('ingredient params: ' + str(params))
     cursor.execute("{CALL InsertIngredientToOrderItem (?,?)}", params)
 
