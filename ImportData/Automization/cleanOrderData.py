@@ -135,7 +135,7 @@ def processRow(row):
 
 # Thread execution
 # -----------------------------------------------------------
-filename = '../MarioOrderDataTest_1000.csv'
+filename = '../MarioOrderData01_10000.csv'
 startTime = time.time()
 rowsProcessed = 0
 failedRows = 0
