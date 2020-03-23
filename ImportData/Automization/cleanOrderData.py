@@ -96,8 +96,7 @@ def insertOrderItem(OrderItem):
         OrderItem.price.replace(",", "."),
         OrderItem.quantity)
 
-    cursor.execute("SELECT * FROM [Order] WHERE [Order].Id = " + str(int(order[0])))
-
+    # result = cursor.execute("SELECT * FROM [Order] WHERE [Order].Id = " + str(int(order[0]))).fetchone()
     # print('orderitem params: ' + str(params))
     cursor.execute("{CALL InsertOrderItemToOrder (?,?,?,?,?,?)}", params)
 
@@ -136,7 +135,7 @@ def processRow(row):
 
 # Thread execution
 # -----------------------------------------------------------
-filename = '../MarioOrderData01_10000.csv'
+filename = '../MarioOrderDataTest_1000.csv'
 startTime = time.time()
 rowsProcessed = 0
 failedRows = 0
@@ -156,6 +155,7 @@ with open(filename, 'r', errors="ignore") as file:
                     rowsProcessed += 1
                     processRow(row)
                 except Exception as e:
+                    cnxn.rollback()
                     print(str(e))
                     print("skipped row: " + str(row))
                     failedRows += 1
@@ -165,6 +165,7 @@ with open(filename, 'r', errors="ignore") as file:
                 rowsProcessed += 1
                 processRow(row)
             except Exception as e:
+                cnxn.rollback()
                 print(str(e))
                 print("skipped row: " + str(row))
 
