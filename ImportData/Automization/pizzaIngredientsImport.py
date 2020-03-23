@@ -39,7 +39,7 @@ for row in ingredient_products.itertuples():
     isVegetarian = None
 
     # Spicy en vegetarisch omzetten naar een bit
-    if isinstance(row[7], unicode):
+    if isinstance(row[7], str):
         if row[7] == 'Ja':
             isSpicy = 1
         elif row[7] == 'Nee':
@@ -47,7 +47,7 @@ for row in ingredient_products.itertuples():
     else:
         print('3: Skipping row: ' + str(row[0]))
 
-    if isinstance(row[8], unicode):
+    if isinstance(row[8], str):
         if row[8] == 'Ja':
             isVegetarian = 1
         elif row[8] == 'Nee':
