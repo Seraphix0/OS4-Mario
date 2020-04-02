@@ -8,10 +8,10 @@ import pyodbc
 
 # initialization
 
-server = 'tcp:os4.database.windows.net'
-database = 'Mario'
-username = 'learningMachine'
-password = 'Oopdevils123'
+server = 'mssql.fhict.local'
+database = 'dbi392341_deeltijds4'
+username = 'dbi392341_deeltijds4'
+password = 'DeeltijdS4'
 cnxn = pyodbc.connect(
     'DRIVER={ODBC Driver 11 for SQL Server};SERVER=' + server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
 cursor = cnxn.cursor()

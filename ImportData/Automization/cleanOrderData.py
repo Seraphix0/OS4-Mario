@@ -4,10 +4,10 @@ import csv
 import time
 
 # Database connection parameters
-server = 'tcp:os4.database.windows.net'
-database = 'Mario'
-username = 'learningMachine'
-password = 'Oopdevils123'
+server = 'mssql.fhict.local'
+database = 'dbi392341_deeltijds4'
+username = 'dbi392341_deeltijds4'
+password = 'deeltijds4'
 
 # Database connection initialization and cursor allocation
 cnxn = pyodbc.connect(
@@ -29,7 +29,7 @@ class Order:
         self.city = city
         self.placementDate = formatDate(placementDate)
         self.deliveryDate = formatDate(deliveryDate)
-        self.deliveryTime = deliveryTime
+        self.deliveryTime = deliveryTime if deliveryTime != 'As soon as possible.' else None
         self.totalPrice = totalPrice[4: len(totalPrice)]
         self.couponName = couponName
         self.discount = discount[4: len(discount)]
@@ -45,30 +45,30 @@ class OrderItem:
 
 
 def convertMonth(row):
-    if (len(row) > 2):
-        if (row[2] == 'januari'):
+    if len(row) > 2:
+        if row[2] == 'januari':
             row[2] = '01'
-        elif (row[2] == 'februari'):
+        elif row[2] == 'februari':
             row[2] = '02'
-        elif (row[2] == 'maart'):
+        elif row[2] == 'maart':
             row[2] = '03'
-        elif (row[2] == 'april'):
+        elif row[2] == 'april':
             row[2] = '04'
-        elif (row[2] == 'mei'):
+        elif row[2] == 'mei':
             row[2] = '05'
-        elif (row[2] == 'juni'):
+        elif row[2] == 'juni':
             row[2] = '06'
-        elif (row[2] == 'juli'):
+        elif row[2] == 'juli':
             row[2] = '07'
-        elif (row[2] == 'augustus'):
+        elif row[2] == 'augustus':
             row[2] = '08'
-        elif (row[2] == 'september'):
+        elif row[2] == 'september':
             row[2] = '09'
-        elif (row[2] == 'oktober'):
+        elif row[2] == 'oktober':
             row[2] = '10'
-        elif (row[2] == 'november'):
+        elif row[2] == 'november':
             row[2] = '11'
-        elif (row[2] == 'december'):
+        elif row[2] == 'december':
             row[2] = '12'
     return row
 
@@ -117,8 +117,9 @@ def processRow(row):
         # Check if column 'Winkelnaam' is not empty
         if row[0] != "":
             try:
-                insertOrder(Order(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], row[9], row[19], row[20],
-                              row[21]))
+                insertOrder(
+                    Order(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], row[9], row[19], row[20],
+                          row[21]))
             except Exception as exception:
                 raise exception
 
@@ -128,14 +129,22 @@ def processRow(row):
             extraIngredients = row[16].split(",")
             for ingredientName in extraIngredients:
                 insertIngredientToOrderItem(ingredientName)
-    cnxn.commit()
+#    cnxn.commit()
+
+
+errorFileName = 'errors.txt'
+
+
+def writeError(row, currentFile, lineNumber, errorString):
+    with open(errorFileName, 'a', errors="ignore") as file:
+        file.write('\n{}|{}|{}|{}|\n'.format(str(currentFile), str(lineNumber), str(row), str(errorString)))
 
 
 # -----------------------------------------------------------
 
 # Thread execution
 # -----------------------------------------------------------
-filename = '../MarioOrderData01_10000.csv'
+filename = '../MarioOrderDataTest_1000.csv'
 startTime = time.time()
 rowsProcessed = 0
 failedRows = 0
@@ -155,6 +164,7 @@ with open(filename, 'r', errors="ignore") as file:
                     rowsProcessed += 1
                     processRow(row)
                 except Exception as e:
+                    writeError(row, filename, reader.line_num, e)
                     cnxn.rollback()
                     print(str(e))
                     print("skipped row: " + str(row))
@@ -165,6 +175,7 @@ with open(filename, 'r', errors="ignore") as file:
                 rowsProcessed += 1
                 processRow(row)
             except Exception as e:
+                writeError(row, filename, reader.line_num, e)
                 cnxn.rollback()
                 print(str(e))
                 print("skipped row: " + str(row))
