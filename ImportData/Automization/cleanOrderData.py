@@ -1,13 +1,15 @@
 # Coding scheme: UTF-8
+import datetime
+
 import pyodbc
 import csv
-import time
+from datetime import datetime
 
 # Database connection parameters
 server = 'mssql.fhict.local'
 database = 'dbi392341_deeltijds4'
 username = 'dbi392341_deeltijds4'
-password = 'deeltijds4'
+password = 'DeeltijdS4'
 
 # Database connection initialization and cursor allocation
 cnxn = pyodbc.connect(
@@ -110,7 +112,7 @@ def insertIngredientToOrderItem(ingredientName):
 
 
 def processRow(row):
-    print('current row: ' + str(row))
+    # print('current row: ' + str(row))
     # Check if column 'Product' is not empty
 
     if row[10] != "":
@@ -129,7 +131,7 @@ def processRow(row):
             extraIngredients = row[16].split(",")
             for ingredientName in extraIngredients:
                 insertIngredientToOrderItem(ingredientName)
-#    cnxn.commit()
+    cnxn.commit()
 
 
 errorFileName = 'errors.txt'
@@ -137,14 +139,18 @@ errorFileName = 'errors.txt'
 
 def writeError(row, currentFile, lineNumber, errorString):
     with open(errorFileName, 'a', errors="ignore") as file:
-        file.write('\n{}|{}|{}|{}|\n'.format(str(currentFile), str(lineNumber), str(row), str(errorString)))
+        now = datetime.now()
+
+        file.write(
+            '\n{}|{}|{}|{}|{}|\n'.format(now.strftime("%H:%M:%S") , str(currentFile), str(lineNumber), str(row),
+                                         str(errorString)))
 
 
 # -----------------------------------------------------------
 
 # Thread execution
 # -----------------------------------------------------------
-filename = '../MarioOrderDataTest_1000.csv'
+filename = '../MarioOrderData02_10000.csv'
 startTime = time.time()
 rowsProcessed = 0
 failedRows = 0
