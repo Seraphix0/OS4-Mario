@@ -1,5 +1,6 @@
 # Coding scheme: UTF-8
 import datetime
+import time
 
 import pyodbc
 import csv
@@ -150,7 +151,7 @@ def writeError(row, currentFile, lineNumber, errorString):
 
 # Thread execution
 # -----------------------------------------------------------
-filename = '../MarioOrderData02_10000.csv'
+filename = '../MarioOrderData03_10000.csv'
 startTime = time.time()
 rowsProcessed = 0
 failedRows = 0
