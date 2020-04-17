@@ -4,7 +4,7 @@ import gui.util.ControllerHelper;
 
 public abstract class AbstractController {
     private static String nextScreen;
-    private static String customerName;
+    protected static String customerName;
 
     protected void changeScreen(String fxml){
         ControllerHelper helper = ControllerHelper.getInstance();
@@ -22,6 +22,10 @@ public abstract class AbstractController {
     protected void changeToNextScreen(String customerName1) {
         customerName = customerName1;
         changeScreen(nextScreen);
+    }
+
+    protected void changeToBase() {
+        changeScreen("/base.fxml");
     }
 
     private void loadFxml(String fxml, ControllerHelper helper) {

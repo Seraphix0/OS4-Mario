@@ -46,12 +46,12 @@ public class ControllerHelper {
 
     private void loadStage(Parent root) {
         if (name == null){
-            this.primaryStage.setTitle("Pokemon");
+            this.primaryStage.setTitle("Mario Business application");
             this.primaryStage.setScene(new Scene(root));
             this.primaryStage.show();
         }
         else{
-            this.primaryStage.setTitle("Pokemon" + " - " + name);
+            this.primaryStage.setTitle("Mario Business application" + " - " + name);
             this.primaryStage.setScene(new Scene(root));
             this.primaryStage.show();
         }

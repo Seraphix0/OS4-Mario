@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.BestSellingPizzasController">
+   <children>
+      <Label fx:id="label" layoutX="353.0" layoutY="45.0" text="Best selling pizzas" />
+      <TableView fx:id="table" layoutX="76.0" layoutY="86.0" prefHeight="473.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="countColumn" prefWidth="111.0" text="Count" />
+          <TableColumn fx:id="nameColumn" prefWidth="214.0" text="Name" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="324.0" text="Description" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
